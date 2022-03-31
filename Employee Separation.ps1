@@ -11,12 +11,12 @@ $ADInfo = Get-ADUser -Identity $username
 
 #Create folder in Technas
 
-New-Item -Path \\technas\ARCHIVE\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_$($leavedate) -ItemType Directory
+New-Item -Path \\**INSERT PATH HERE**\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_$($leavedate) -ItemType Directory
 
 #Export user groups
 
-Get-ADPrincipalGroupMembership -Identity $username | select name, groupcategory, groupscope | sort-object name | Export-csv -Path \\technas\ARCHIVE\_AD_UserGroupLists\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_GroupMemberships.csv
-Get-ADPrincipalGroupMembership -Identity $username | select name, groupcategory, groupscope | sort-object name | Export-csv -Path \\technas\ARCHIVE\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_$($leavedate)\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_GroupMemberships.csv
+Get-ADPrincipalGroupMembership -Identity $username | select name, groupcategory, groupscope | sort-object name | Export-csv -Path \\**INSERT PATH HERE**\_AD_UserGroupLists\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_GroupMemberships.csv
+Get-ADPrincipalGroupMembership -Identity $username | select name, groupcategory, groupscope | sort-object name | Export-csv -Path \\**INSERT PATH HERE**\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_$($leavedate)\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_GroupMemberships.csv
 
 #Reset account password to generic one
 
