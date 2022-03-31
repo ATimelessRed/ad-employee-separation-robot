@@ -1,5 +1,5 @@
 # ad-employee-separation-robot
-First script I've made for our Hybrid O365 environment. It prompts the user for information and does some AD stuff in the background. Will be improving on it over time.
+Script I've made for our Hybrid O365 environment. It prompts the user for information and does some AD stuff in the background. Will be improving on it over time.
 
 Future improvements:
 
