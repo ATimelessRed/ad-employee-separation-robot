@@ -9,7 +9,7 @@ $leavedate = Read-Host -Prompt "When are they leaving? ex. 3-24-2022"
 
 $ADInfo = Get-ADUser -Identity $username
 
-#Create folder in Technas
+#Create folder in location where you store separation info
 
 New-Item -Path \\**INSERT PATH HERE**\$($ADInfo.Surname)_$($ADInfo.GivenName)_$($Dept)_$($leavedate) -ItemType Directory
 
